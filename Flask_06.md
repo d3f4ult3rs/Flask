@@ -371,27 +371,23 @@ Match found for path "/about" but not for method "DELETE"
 
 ```
  app.url_map (Werkzeug Map)
- ┌──────────────────────────────────────────────────────┐
- │  Rule("/"          , methods=["GET","HEAD","OPTIONS"],│
- │       endpoint="home")                                │
- │                                                       │
- │  Rule("/about"     , methods=["GET","HEAD","OPTIONS"],│
- │       endpoint="about")                               │
- │                                                       │
- │  Rule("/contact"   , methods=["GET","POST",           │
- │                               "HEAD","OPTIONS"],      │
- │       endpoint="contact")                             │
- │                                                       │
- │  Rule("/static/<path:filename>",                      │
- │       endpoint="static")   ← auto-added by Flask      │
- └──────────────────────────────────────────────────────┘
+ ┌───────────────────────────────────────────────────────────────────────────────────┐
+ │  Rule("/" , methods=["GET","HEAD","OPTIONS"], endpoint="home")                    │
+ │                                                                                   │
+ │  Rule("/about", methods=["GET","HEAD","OPTIONS"], endpoint="about")               │
+ │                                                                                   │
+ │  Rule("/contact"   , methods=["GET","POST","HEAD","OPTIONS"], endpoint="contact") │
+ │                                                                                   │
+ │  Rule("/static/<path:filename>", endpoint="static")   ← auto-added by Flask       |              │
+ │                                                                                   │
+ └───────────────────────────────────────────────────────────────────────────────────┘
 
  app.view_functions
  ┌─────────────────────────────────────────┐
  │  "home"    → <function home at 0x...>   │
  │  "about"   → <function about at 0x...>  │
  │  "contact" → <function contact at 0x...>│
- │  "static"  → Flask's internal handler  │
+ │  "static"  → Flask's internal handler   │
  └─────────────────────────────────────────┘
 ```
 
