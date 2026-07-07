@@ -114,6 +114,7 @@ all_args = request.args.to_dict()
 
 **Common Methods**
 ```python
+______________________________________________________________________________________________________________
 | Method                              | Description                        | Example Result                  |
 | ----------------------------------- | ---------------------------------- | ------------------------------- |
 |  request.args.get("name")           | Get first value or `None`          | `"abhi"`                        |
@@ -121,11 +122,12 @@ all_args = request.args.to_dict()
 |  request.args.get("age", type=int)  | Convert to integer                 | `20`                            |
 |  request.args["name"]               | Get value, raises error if missing | `"abhi"`                        |
 |  request.args.getlist("name")       | Get all values                     | `["python", "flask"]`           |
-|  "name" in request.args             | Check if key exists                | `True`                          |
+|  if "name" in request.args          | Check if key exists                | `True`                          |
 |  request.args.items()               | Iterate over key-value pairs       | `("name", "abhi")`              |
 |  request.args.keys()                | Get all keys                       | `["name", "age"]`               |
 |  request.args.values()              | Get all values                     | `["abhi", "20"]`                |
 |  request.args.to_dict()             | Convert to standard dictionary     | `{"name": "abhi", "age": "20"}` |
+______________________________________________________________________________________________________________
 ```
 
 > **Important:** All values from `request.args` are **strings**. If you need a number, convert manually:
