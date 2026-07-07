@@ -125,6 +125,7 @@ all_args = request.args.to_dict()
 | `request.args.keys()`               | Get all keys                       | `["name", "age"]`               |
 | `request.args.values()`             | Get all values                     | `["abhi", "20"]`                |
 | `request.args.to_dict()`            | Convert to standard dictionary     | `{"name": "abhi", "age": "20"}` |
+```
 
 > **Important:** All values from `request.args` are **strings**. If you need a number, convert manually:
 > ```python
