@@ -216,18 +216,18 @@ all_data = request.form.to_dict()
 ```python
 | Method                                  | Description                        | Example Result                               |
 | --------------------------------------- | ---------------------------------- | -------------------------------------------- |
-| `request.form.get("username")`          | Get first value or `None`          | `"abhi"`                                     |
-| `request.form.get("username", "Guest")` | Get value with default             | `"Guest"`                                    |
-| `request.form.get("age", type=int)`     | Convert to integer                 | `20`                                         |
-| `request.form["username"]`              | Get value, raises error if missing | `"abhi"`                                     |
-| `request.form.getlist("skills")`        | Get all values for the same field  | `["Python", "Flask"]`                        |
-| `"username" in request.form`            | Check if key exists                | `True`                                       |
-| `request.form.items()`                  | Iterate over key-value pairs       | `("username", "abhi")`                       |
-| `request.form.keys()`                   | Get all keys                       | `["username", "password"]`                   |
-| `request.form.values()`                 | Get all values                     | `["abhi", "123456"]`                         |
-| `request.form.to_dict()`                | Convert to standard dictionary     | `{"username": "abhi", "password": "123456"}` |
-| `request.form.lists()`                  | Get all keys with all their values | `("skills", ["Python", "Flask"])`            |
-| `len(request.form)`                     | Get the number of submitted fields | `2`                                          |
+|  request.form.get("username")           | Get first value or `None`          | `"abhi"`                                     |
+|  request.form.get("username", "Guest")  | Get value with default             | `"Guest"`                                    |
+|  request.form.get("age", type=int)      | Convert to integer                 | `20`                                         |
+|  request.form["username"]               | Get value, raises error if missing | `"abhi"`                                     |
+|  request.form.getlist("skills")         | Get all values for the same field  | `["Python", "Flask"]`                        |
+|  if "username" in request.form          | Check if key exists                | `True`                                       |
+|  request.form.items()                   | Iterate over key-value pairs       | `("username", "abhi")`                       |
+|  request.form.keys()                    | Get all keys                       | `["username", "password"]`                   |
+|  request.form.values()                  | Get all values                     | `["abhi", "123456"]`                         |
+|  request.form.to_dict()                 | Convert to standard dictionary     | `{"username": "abhi", "password": "123456"}` |
+|  request.form.lists()                   | Get all keys with all their values | `("skills", ["Python", "Flask"])`            |
+|  len(request.form)                      | Get the number of submitted fields | `2`                                          |
 ```
 
 
